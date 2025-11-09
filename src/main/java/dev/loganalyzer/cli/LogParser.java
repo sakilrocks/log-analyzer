@@ -36,7 +36,7 @@ public class LogParser {
     }
 
     public List<String> filterByDate(String since) {
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-mm-dd");
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate sinceDate = LocalDate.parse(since, fmt);
         List<String> result = new ArrayList<>();
         Pattern datePattern = Pattern.compile("(\\d{4}-\\d{2}-\\d{2})");
